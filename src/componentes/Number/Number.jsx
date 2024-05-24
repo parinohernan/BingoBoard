@@ -7,7 +7,7 @@ const Number = ({ number, handleNumberClick }) => {
   number.salio ? (salio = "YES") : (salio = "NO");
   if (number.salio) {
     return (
-      <div>
+      <div className={styles.cel}>
         <button className={styles.selected} onClick={handleNumberClick}>
           {number.numero}
         </button>
@@ -16,7 +16,7 @@ const Number = ({ number, handleNumberClick }) => {
     );
   }
   return (
-    <div>
+    <div className={styles.cel}>
       <button className={styles.noSelected} onClick={handleNumberClick}>
         {number.numero}
       </button>

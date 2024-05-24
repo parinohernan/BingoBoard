@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h2>BINGO FAMILIAR - I.G.S.M.</h2>
+      <h1>BINGO FAMILIAR - I.G.S.M.</h1>
       <Board />
     </div>
   );
