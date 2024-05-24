@@ -3,13 +3,13 @@ import styles from "./Board.module.css";
 import Number from "../Number/Number";
 
 const Board = () => {
-  const cantidadDeNumeros = 100;
+  const cantidadDeNumeros = 91;
   const [numbers, setNumbers] = useState([]);
   const [showNumber, setShowNumber] = useState(null);
 
   useEffect(() => {
     const numerosAux = [];
-    for (let i = 0; i < cantidadDeNumeros; i++) {
+    for (let i = 1; i < cantidadDeNumeros; i++) {
       numerosAux.push({ numero: i, salio: false });
     }
     setNumbers(numerosAux);
