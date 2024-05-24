@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 100vh;
+  position: relative; /* Necesario para la superposición */
 }
 
 .bingoBoard {
@@ -14,4 +15,28 @@
 .line {
   display: flex;
   gap: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Para que los clics pasen a través de la superposición */
+}
+
+.largeNumber {
+  font-size: 700px;
+  color: black;
+  font-weight: bolder;
+  animation: fadeOut 7s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

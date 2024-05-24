@@ -3,8 +3,9 @@ import styles from "./Board.module.css";
 import Number from "../Number/Number";
 
 const Board = () => {
-  const cantidadDeNumeros = 100; // Ajusta la cantidad de números según sea necesario
+  const cantidadDeNumeros = 100;
   const [numbers, setNumbers] = useState([]);
+  const [showNumber, setShowNumber] = useState(null);
 
   useEffect(() => {
     const numerosAux = [];
@@ -19,6 +20,14 @@ const Board = () => {
       num.numero === n.numero ? { ...num, salio: !num.salio } : num
     );
     setNumbers(updatedNumbers);
+
+    // Set the selected number for the animation
+    setShowNumber(n.numero);
+
+    // Clear the selected number after 5 seconds
+    setTimeout(() => {
+      setShowNumber(null);
+    }, 5000);
   };
 
   // Divide los números en filas de 10
@@ -42,6 +51,11 @@ const Board = () => {
           </div>
         ))}
       </div>
+      {showNumber !== null && (
+        <div className={styles.overlay}>
+          <div className={styles.largeNumber}>{showNumber}</div>
+        </div>
+      )}
     </div>
   );
 };
