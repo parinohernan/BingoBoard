@@ -1,6 +1,6 @@
 .noSelected {
     background-color: #c5a9a1;
-    color: #ffffff;
+    color: #cac0bd;
     font-size: 20px;
     margin: 1px;
     height: 4rem;
@@ -10,9 +10,10 @@
 .selected {
     background-color: #007bff;
     /* background-color: #c5a9a1; */
-    color: #fff;
+    color: #fcfcfc;
     font-size: 20px;
-    margin: 2px;
+    font-weight: bold;
+    margin: 1px;
     height: 4rem;
     width: 4rem ;
 }
